@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Default (Mobile-First) Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        figure {
+            width: 100%;
+            border: 2px solid #333;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px; /* Small rounded corners for mobile */
+        }
+
+        /* Tablet View - min-width: 772px */
+        @media (min-width: 772px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            figure {
+                border-radius: 50%;
+            }
+
+            figure:last-child {
+                grid-column: span 2;
+            }
+        }
+
+        /* Large Screen View - min-width: 992px */
+        @media (min-width: 992px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            figure {
+                border-radius: 0;
+            }
+
+            figure:nth-child(3n) {
+                grid-column: span 2;
+            }
+        }
+
+        /* Prefers Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: #ddd;
+            }
+
+            figure {
+                background-color: #333;
+                color: yellow;
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?nature" alt="Nature Scene">
+            <figcaption>Beautiful Nature</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?city" alt="City Landscape">
+            <figcaption>City Landscape</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?technology" alt="Technology">
+            <figcaption>Modern Technology</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?food" alt="Delicious Food">
+            <figcaption>Delicious Food</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?animal" alt="Wild Animal">
+            <figcaption>Wild Animal</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?ocean" alt="Ocean View">
+            <figcaption>Ocean View</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?car" alt="Luxury Car">
+            <figcaption>Luxury Car</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?space" alt="Outer Space">
+            <figcaption>Outer Space</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?architecture" alt="Architecture">
+            <figcaption>Stunning Architecture</figcaption>
+        </figure>
+        <figure>
+            <img src="https://source.unsplash.com/400x300/?mountain" alt="Mountain Landscape">
+            <figcaption>Mountain Landscape</figcaption>
+        </figure>
+    </div>
+
+</body>
+</html>
